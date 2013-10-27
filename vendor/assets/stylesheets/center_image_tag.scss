@@ -1,0 +1,56 @@
+.standard-thumb {
+  display:        inline-block;
+  vertical-align: middle;
+  overflow:       hidden;
+
+  img {
+    outline:      none;
+  }
+
+  .vertical-align {
+    height: 100%;
+  }
+}
+
+.thumb-fluid {
+  width:    100%;
+
+  .thumb-clip {
+    left:   0;
+    right:  0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.thumb-default {
+  padding-bottom: 56.25%;
+  display:        block;
+  height:         auto;
+}
+
+.thumb-clip {
+  position: absolute;
+  top:          -100px;
+  bottom:       -100px;
+  left:         -100px;
+  right:        -100px;
+  text-align:   center;
+  white-space:  nowrap;
+  word-break:   normal;
+
+  img, .vertical-align {
+    display:        inline-block;
+    vertical-align: middle;
+  }
+}
+
+.thumb-clip-inner {
+  position:   absolute;
+  width:      100%;
+  height:     100%;
+  top:        0;
+  left:       0;
+}

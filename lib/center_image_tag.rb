@@ -1,5 +1,6 @@
-require "center_image_tag/version"
-
 module CenterImageTag
-  # Your code goes here...
+
 end
+
+require "center_image_tag/version"
+require 'center_image_tag/view_helper'
