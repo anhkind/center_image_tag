@@ -6,10 +6,10 @@ require 'center_image_tag/version'
 Gem::Specification.new do |spec|
   spec.name          = "center_image_tag"
   spec.version       = CenterImageTag::VERSION
-  spec.authors       = ["anhkind"]
+  spec.authors       = ["Anh Nguyen"]
   spec.email         = ["anhkind@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = "center_image_tag helps your Rails app to center your images easily."
+  spec.summary       = "Center your images without js."
   spec.homepage      = ""
   spec.license       = "MIT"
 
