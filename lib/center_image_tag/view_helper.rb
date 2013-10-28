@@ -7,12 +7,14 @@ module CenterImageTag
     include ActionView::Helpers::AssetTagHelper
 
     def center_image_tag(source, options = {})
-      div class: 'standard-thumb thumb-fluid' do
-        div class: 'thumb-default' do
-          div class: 'thumb-clip' do
-            div class: 'thumb-clip-inner' do
+      fluid =  options[:size] || options[:width] || options[:height] ? false : true
+
+      div class: "standard-thumb#{' thumb-fluid' if fluid}" do
+        div class: "thumb-default" do
+          div class: "thumb-clip" do
+            div class: "thumb-clip-inner" do
               image_tag(source, options) +
-              tag(:span, class: 'vertical-align')
+              tag(:span, class: "vertical-align")
             end
           end
         end
