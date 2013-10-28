@@ -7,35 +7,29 @@ module CenterImageTag
     include ActionView::Helpers::AssetTagHelper
 
     def center_image_tag(source, options = {})
-      fluid =  options[:size] || options[:width] || options[:height] ? false : true
-
-      container_outer fluid do
-        container_inner do
-          clip_outer do
-            clip_inner do
-              image_tag(source, options) +
-              tag(:span, class: "vertical-align")
-            end
+      if fluid_percentage = options.delete(:fluid)
+        return container_fluid fluid_percentage do
+          clip do
+            image_tag(source, options) +
+            tag(:span, class: "vertical-align")
           end
         end
       end
+
+      image_tag(source, options)
     end
 
     private
-    def container_outer(fluid = nil, &block)
-      div class: "standard-thumb#{' thumb-fluid' if fluid}", &block
+    def container_fluid(fluid_percentage, &block)
+      div class: "standard-thumb thumb-fluid" do
+        div class: "thumb-default", style: "padding-bottom: #{fluid_percentage}", &block
+      end
     end
 
-    def container_inner(&block)
-      div class: "thumb-default", &block
-    end
-
-    def clip_outer(&block)
-      div class: "thumb-clip", &block
-    end
-
-    def clip_inner(&block)
-      div class: "thumb-clip-inner", &block
+    def clip(&block)
+      div class: "thumb-clip" do
+        div class: "thumb-clip-inner", &block
+      end
     end
 
     def div(options = {}, &block)
