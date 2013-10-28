@@ -9,10 +9,10 @@ module CenterImageTag
     def center_image_tag(source, options = {})
       fluid =  options[:size] || options[:width] || options[:height] ? false : true
 
-      div class: "standard-thumb#{' thumb-fluid' if fluid}" do
-        div class: "thumb-default" do
-          div class: "thumb-clip" do
-            div class: "thumb-clip-inner" do
+      container_outer fluid do
+        container_inner do
+          clip_outer do
+            clip_inner do
               image_tag(source, options) +
               tag(:span, class: "vertical-align")
             end
@@ -22,6 +22,22 @@ module CenterImageTag
     end
 
     private
+    def container_outer(fluid = nil, &block)
+      div class: "standard-thumb#{' thumb-fluid' if fluid}", &block
+    end
+
+    def container_inner(&block)
+      div class: "thumb-default", &block
+    end
+
+    def clip_outer(&block)
+      div class: "thumb-clip", &block
+    end
+
+    def clip_inner(&block)
+      div class: "thumb-clip-inner", &block
+    end
+
     def div(options = {}, &block)
       content_tag :div, options, &block
     end
