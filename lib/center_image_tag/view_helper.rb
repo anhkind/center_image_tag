@@ -7,8 +7,9 @@ module CenterImageTag
     include ActionView::Helpers::AssetTagHelper
 
     def center_image_tag(source, options = {})
+      container_class = options.delete(:container_class)
       if fluid_percentage = options.delete(:fluid)
-        return container_fluid fluid_percentage do
+        return container_fluid fluid_percentage, container_class do
           clip do
             image_tag(source, options) +
             tag(:span, class: "vertical-align")
@@ -17,7 +18,7 @@ module CenterImageTag
       else
         width, height = dimension(options)
         if width && height
-          return container_fixed width, height do
+          return container_fixed width, height, container_class do
             clip do
               image_tag(source, rebuild_options(options, width, height)) +
                 tag(:span, class: "vertical-align")
@@ -30,14 +31,14 @@ module CenterImageTag
     end
 
     private
-    def container_fluid(fluid_percentage, &block)
-      div class: "cit-standard-thumb cit-thumb-fluid" do
+    def container_fluid(fluid_percentage, outer_class, &block)
+      div class: "cit-standard-thumb cit-thumb-fluid #{outer_class}" do
         div class: "cit-thumb-default", style: "padding-bottom: #{fluid_percentage}", &block
       end
     end
 
-    def container_fixed(width, height, &block)
-      div class: "cit-standard-thumb", style: "width: #{width}px" do
+    def container_fixed(width, height, outer_class, &block)
+      div class: "cit-standard-thumb #{outer_class}", style: "width: #{width}px" do
         div class: "cit-thumb-default", style: "padding-bottom: #{height}px", &block
       end
     end
