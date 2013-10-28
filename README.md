@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/anhkind/center_image_tag.png)](https://travis-ci.org/anhkind/center_image_tag)
+
 # CenterImageTag
 
 TODO: Write a gem description
