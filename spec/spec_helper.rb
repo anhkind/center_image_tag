@@ -7,4 +7,4 @@ RSpec.configure do |config|
   config.order = :random
 end
 
-class View; include CenterImageTag::ViewHelper; end
+class View; include CenterImageTag; end
