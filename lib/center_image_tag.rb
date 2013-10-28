@@ -10,7 +10,7 @@ module CenterImageTag
   def center_image_tag(source, options = {})
     container_class = options.delete(:container_class)
     if fluid_percentage = options.delete(:fluid)
-      return container_fluid fluid_percentage, container_class do
+      return container_fluid(fluid_percentage, container_class) do
         clip do
           image_tag(source, options) +
             tag(:span, class: "vertical-align")
@@ -19,7 +19,7 @@ module CenterImageTag
     else
       width, height = dimension(options)
       if width && height
-        return container_fixed width, height, container_class do
+        return container_fixed(width, height, container_class) do
           clip do
             image_tag(source, rebuild_options(options, width, height)) +
               tag(:span, class: "vertical-align")
