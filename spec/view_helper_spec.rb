@@ -13,10 +13,10 @@ module CenterImageTag
     describe 'fluid' do
       it 'renders the fluid image correctly' do
         output    = View.new.center_image_tag 'image.png', fluid: "56.25%"
-        expected  = "<div class=\"standard-thumb thumb-fluid\">" +
-                      "<div class=\"thumb-default\" style=\"padding-bottom: 56.25%\">" +
-                        "<div class=\"thumb-clip\">" +
-                          "<div class=\"thumb-clip-inner\">" +
+        expected  = "<div class=\"cit-standard-thumb cit-thumb-fluid\">" +
+                      "<div class=\"cit-thumb-default\" style=\"padding-bottom: 56.25%\">" +
+                        "<div class=\"cit-thumb-clip\">" +
+                          "<div class=\"cit-thumb-clip-inner\">" +
                             "<img alt=\"Image\" src=\"/images/image.png\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
@@ -30,10 +30,10 @@ module CenterImageTag
     describe 'fixed' do
       it 'renders the fixed image correctly from size options (size = widthxheight)' do
         output    = View.new.center_image_tag 'image.png', size: "200x100"
-        expected  = "<div class=\"standard-thumb\" style=\"width: 200px\">" +
-                      "<div class=\"thumb-default\" style=\"padding-bottom: 100px\">" +
-                        "<div class=\"thumb-clip\">" +
-                          "<div class=\"thumb-clip-inner\">" +
+        expected  = "<div class=\"cit-standard-thumb\" style=\"width: 200px\">" +
+                      "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
+                        "<div class=\"cit-thumb-clip\">" +
+                          "<div class=\"cit-thumb-clip-inner\">" +
                             "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
@@ -45,10 +45,10 @@ module CenterImageTag
 
       it 'renders the fixed image correctly from size options (single size value)' do
         output    = View.new.center_image_tag 'image.png', size: "200"
-        expected  = "<div class=\"standard-thumb\" style=\"width: 200px\">" +
-                      "<div class=\"thumb-default\" style=\"padding-bottom: 200px\">" +
-                        "<div class=\"thumb-clip\">" +
-                          "<div class=\"thumb-clip-inner\">" +
+        expected  = "<div class=\"cit-standard-thumb\" style=\"width: 200px\">" +
+                      "<div class=\"cit-thumb-default\" style=\"padding-bottom: 200px\">" +
+                        "<div class=\"cit-thumb-clip\">" +
+                          "<div class=\"cit-thumb-clip-inner\">" +
                             "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
@@ -60,10 +60,10 @@ module CenterImageTag
 
       it 'renders the fixed image correctly from width and height options' do
         output    = View.new.center_image_tag 'image.png', width: "200", height: 100
-        expected  = "<div class=\"standard-thumb\" style=\"width: 200px\">" +
-                      "<div class=\"thumb-default\" style=\"padding-bottom: 100px\">" +
-                        "<div class=\"thumb-clip\">" +
-                          "<div class=\"thumb-clip-inner\">" +
+        expected  = "<div class=\"cit-standard-thumb\" style=\"width: 200px\">" +
+                      "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
+                        "<div class=\"cit-thumb-clip\">" +
+                          "<div class=\"cit-thumb-clip-inner\">" +
                             "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +

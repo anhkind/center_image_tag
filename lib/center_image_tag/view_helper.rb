@@ -31,20 +31,20 @@ module CenterImageTag
 
     private
     def container_fluid(fluid_percentage, &block)
-      div class: "standard-thumb thumb-fluid" do
-        div class: "thumb-default", style: "padding-bottom: #{fluid_percentage}", &block
+      div class: "cit-standard-thumb cit-thumb-fluid" do
+        div class: "cit-thumb-default", style: "padding-bottom: #{fluid_percentage}", &block
       end
     end
 
     def container_fixed(width, height, &block)
-      div class: "standard-thumb", style: "width: #{width}px" do
-        div class: "thumb-default", style: "padding-bottom: #{height}px", &block
+      div class: "cit-standard-thumb", style: "width: #{width}px" do
+        div class: "cit-thumb-default", style: "padding-bottom: #{height}px", &block
       end
     end
 
     def clip(&block)
-      div class: "thumb-clip" do
-        div class: "thumb-clip-inner", &block
+      div class: "cit-thumb-clip" do
+        div class: "cit-thumb-clip-inner", &block
       end
     end
 

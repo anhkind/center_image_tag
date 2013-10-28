@@ -1,4 +1,4 @@
-.standard-thumb {
+.cit-standard-thumb {
   display:        inline-block;
   vertical-align: middle;
   overflow:       hidden;
@@ -12,7 +12,7 @@
   }
 }
 
-.thumb-fluid {
+.cit-thumb-fluid {
   width:    100%;
 
   .thumb-clip {
@@ -25,12 +25,12 @@
   }
 }
 
-.thumb-default {
+.cit-thumb-default {
   display:        block;
   height:         auto;
 }
 
-.thumb-clip {
+.cit-thumb-clip {
   position: absolute;
   top:          -100px;
   bottom:       -100px;
@@ -46,7 +46,7 @@
   }
 }
 
-.thumb-clip-inner {
+.cit-thumb-clip-inner {
   position:   absolute;
   width:      100%;
   height:     100%;
