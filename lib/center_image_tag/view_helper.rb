@@ -67,7 +67,8 @@ module CenterImageTag
       # rebuild options
       options.delete(:size)
       options.delete(:height)
-      options.merge(width: width)
+      options.delete(:width)
+      options.merge(style: "width: #{width}px")
     end
   end
 end

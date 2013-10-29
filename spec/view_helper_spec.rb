@@ -54,7 +54,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
@@ -69,7 +69,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
@@ -84,7 +84,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 200px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
@@ -99,7 +99,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 200px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
@@ -115,7 +115,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
@@ -130,7 +130,7 @@ module CenterImageTag
                       "<div class=\"cit-thumb-default\" style=\"padding-bottom: 100px\">" +
                         "<div class=\"cit-thumb-clip\">" +
                           "<div class=\"cit-thumb-clip-inner\">" +
-                            "<img alt=\"Image\" src=\"/images/image.png\" width=\"200\" />" +
+                            "<img alt=\"Image\" src=\"/images/image.png\" style=\"width: 200px\" />" +
                             "<span class=\"vertical-align\" />" +
                           "</div>" +
                         "</div>" +
