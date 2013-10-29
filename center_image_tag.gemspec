@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = CenterImageTag::VERSION
   spec.authors       = ["Anh Nguyen"]
   spec.email         = ["anhkind@gmail.com"]
-  spec.description   = "center_image_tag helps your Rails app to center your images easily."
-  spec.summary       = "Center your images without js."
+  spec.description   = "center_image_tag helps your Rails app to center your images easily with pure css."
+  spec.summary       = "Center your images with pure css."
   spec.homepage      = "https://github.com/anhkind/center_image_tag"
   spec.license       = "MIT"
 
