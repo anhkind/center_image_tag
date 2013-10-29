@@ -1,9 +1,7 @@
-require 'rails/railtie'
-
 module CenterImageTag
-  class Railtie < Rails::Railtie
-    config.after_initialize do |app|
-      class ActionView::Base
+  class Engine < ::Rails::Engine
+    initializer 'center_image_tag.initialize' do
+      ActiveSupport.on_load(:action_view) do
         include CenterImageTag::ViewHelper
       end
     end
