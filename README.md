@@ -3,7 +3,11 @@
 
 # center_image_tag: Center your images with pure css
 
-`center_image_tag` is another tag helper for Rails app which helps to center your image in its parent element view. It has the same arguments as `image_tag`, so you can easily integrate this into your current Rails app.
+`center_image_tag` is another tag helper for Rails app which helps to center your image in its parent element view. `center_image_tag` will help you to display the center (middle) portion of your image as below (red box):
+
+![Flower](https://copy.com/siBGDtdvmwyMO2Gz)
+
+It has the same arguments as `image_tag`, so you can easily integrate this into your current Rails app.
 
 `center_image_tag` has a built-in fluid mode which would buy you some time to center the images in your responsive design. Otherwise, just set fixed width and height as in `image_tag`, you can also have images auto-centered with the set dimension.
 
